@@ -5,6 +5,7 @@
 @use "prices";
 @use "turnkey";
 @use "results";
+@use "feedback";
 
 html, body {
     font-family: "Manrope";
@@ -31,6 +32,10 @@ h3 {
 
 h4 {
     font-size: variables.$h4;
+}
+
+p {
+    margin: 0;
 }
 
 a {

@@ -258,11 +258,15 @@
 .prices__form .form {
   display: flex;
   gap: 20px;
+  width: 50%;
 }
 .prices__form input {
+  font-size: 16px;
+  font-weight: 400;
   padding: 16px;
   border: 1px solid rgba(21, 36, 48, 0.4);
   border-radius: 5px;
+  width: 100%;
 }
 .prices__submit {
   display: flex;
@@ -352,21 +356,21 @@
 .results__buttons img {
   cursor: pointer;
   position: absolute;
-  top: 46%;
   background-color: transparent;
   width: auto;
   transition: scale 0.3s;
+  top: 42%;
 }
 .results__buttons img:hover {
   scale: 1.2;
 }
 .results__buttons .results__arrow--prev {
-  left: 170px;
+  left: 20px;
   transform: rotate(180deg);
   z-index: 999;
 }
 .results__buttons .results__arrow--next {
-  right: 170px;
+  right: 20px;
   z-index: 999;
 }
 .results__gallery {
@@ -389,6 +393,31 @@
 .results__gallery--card h4 {
   color: #FFFFFF;
   margin-top: 10px;
+}
+
+.feedback {
+  padding: 120px 0 80px 0;
+}
+.feedback__buttons {
+  display: flex;
+  gap: 20px;
+  margin: 50px 0 30px 0;
+}
+.feedback__buttons button {
+  margin-left: auto;
+  width: 15%;
+}
+.feedback__services {
+  display: flex;
+  font-size: 18px;
+  gap: 5px;
+  border: 1px solid #152430;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+.feedback__card {
+  border: 1px solid rgba(21, 36, 48, 0.4);
+  border-radius: 20px;
 }
 
 html, body {
@@ -416,6 +445,10 @@ h3 {
 
 h4 {
   font-size: 24px;
+}
+
+p {
+  margin: 0;
 }
 
 a {

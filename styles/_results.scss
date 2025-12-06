@@ -31,10 +31,10 @@
     img { 
         cursor: pointer;
         position: absolute;
-        top: 46%; 
         background-color: transparent; 
         width: auto; 
         transition: scale 0.3s; 
+        top: 42%;
 
         &:hover { 
             scale: 1.2; 
@@ -42,13 +42,13 @@
     } 
     
     .results__arrow--prev { 
-        left: 170px; 
+        left: 20px; 
         transform: rotate(180deg); 
         z-index: 999; 
     } 
     
     .results__arrow--next { 
-        right: 170px; 
+        right: 20px; 
         z-index: 999; 
     }
   }
