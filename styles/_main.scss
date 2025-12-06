@@ -1,0 +1,73 @@
+@use "variables";
+
+.main {
+    background-image: url("../assets/main-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: variables.$text-white;
+    padding: 100px;
+    margin-top: 44px;
+
+    h2 {
+        color: variables.$text-white;
+    }
+
+    &__card {
+        padding: 50px 60px;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        font-size: 22px;
+        font-weight: 200;
+
+        border-radius: 20px;
+        border: 2px solid transparent;
+
+        background:
+            linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.10)) padding-box,
+            linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.15)) border-box;
+
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+
+        box-shadow: inset 10px 12px 60px rgba(225, 225, 225, 0.1);
+
+        gap: 50px;
+        width: 55%;
+
+        button {
+            padding: 15px 0;
+            width: 25%;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        list-style: none;
+        margin: 0;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -40px;
+                top: 3px;
+                width: 26px;  
+                height: 26px;
+                background-image: url("../assets/check.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+             
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+}

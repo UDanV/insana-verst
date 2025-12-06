@@ -1,0 +1,80 @@
+@use "variables";
+
+.results {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: variables.$text-dark-blue;
+  padding: 70px 0 80px 0;
+
+  h2 {
+    color: variables.$text-white;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+
+    button {
+        display: block;
+        padding: 12px 25px;
+        margin: 80px auto 0;
+    }
+  }
+
+  &__buttons {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+
+    img { 
+        cursor: pointer;
+        position: absolute;
+        top: 46%; 
+        background-color: transparent; 
+        width: auto; 
+        transition: scale 0.3s; 
+
+        &:hover { 
+            scale: 1.2; 
+        } 
+    } 
+    
+    .results__arrow--prev { 
+        left: 170px; 
+        transform: rotate(180deg); 
+        z-index: 999; 
+    } 
+    
+    .results__arrow--next { 
+        right: 170px; 
+        z-index: 999; 
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__gallery--card {
+    min-width: 450px;
+    border-radius: 12px;
+    color: variables.$text-white;
+    padding: 15px;
+    padding-left: 0;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    h4 {
+      color: variables.$text-white;
+      margin-top: 10px;
+    }
+  }
+}

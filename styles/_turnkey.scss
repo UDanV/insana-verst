@@ -1,0 +1,54 @@
+.turnkey {
+    padding: 0 0 120px 0;
+
+    h2 {
+        font-size: 42px;
+    }
+
+    &__card {
+        background-color: rgba(21, 36, 48, 0.08);
+        border-radius: 20px;
+        padding: 50px 60px 0 60px;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        button {
+            padding: 12px 25px;
+            width: 20%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: 500;
+        font-size: 18px;
+        list-style: none;
+        margin-bottom: 20px;
+
+        li {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -40px;
+                top: 0px;
+                width: 26px;  
+                height: 26px;
+                background-image: url("../assets/check.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

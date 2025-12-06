@@ -1,0 +1,86 @@
+@use "variables";
+
+.header {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+
+    a {
+        color: variables.$text-black;
+    
+        &:hover {
+            color: variables.$text-beige;
+        }
+    }
+
+    &__top {
+        display: flex;
+        padding: 13px 0;
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        gap: 5px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .callback {
+            color: variables.$text-beige;
+            margin-left: 10px;
+            margin-right: 40px;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+
+        a {
+            color: variables.$text-white;
+            text-decoration: none;
+
+            &:hover {
+                color: variables.$text-beige;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+        background-color: variables.$text-dark-blue;
+        color: variables.$text-white;
+        font-size: 16px;
+        padding: 15px 0;
+
+        button {
+            width: auto;
+            padding: 0 25px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
