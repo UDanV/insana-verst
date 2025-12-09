@@ -37,7 +37,8 @@
         }
     }
 
-    &__phone {
+    &__phone,
+    &__email {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -51,21 +52,7 @@
         margin-left: auto;
     }
 
-    &__links {
-        display: flex;
-        list-style: none;
-        gap: 25px;
-
-        a {
-            color: variables.$text-white;
-            text-decoration: none;
-
-            &:hover {
-                color: variables.$text-beige;
-            }
-        }
-    }
-
+    // === Нижняя часть хедера (меню) ===
     &__bottom {
         width: 100%;
         background-color: variables.$text-dark-blue;
@@ -76,11 +63,333 @@
         button {
             width: auto;
             padding: 0 25px;
+            background: variables.$text-beige;
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.9;
+            }
         }
 
         .container {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        // Стили для меню ссылок
+        .header__links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+
+            a {
+                color: variables.$text-white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: variables.$text-beige;
+                }
+            }
+
+            li {
+                position: relative; // ← КЛЮЧЕВОЕ: для position: absolute дропдауна
+            }
         }
     }
+
+    // === Дропдаун (внутри .header) ===
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .dropdown-arrow {
+            font-size: 10px;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.7);
+            transition: transform 0.2s;
+            user-select: none;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            min-width: 220px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            padding: 12px 0;
+            list-style: none;
+            margin: 8px 0 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+
+            li {
+                margin: 0;
+                padding: 0 20px;
+            }
+
+            a {
+                display: block;
+                padding: 8px 0;
+                color: variables.$text-black;
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+
+                &:hover {
+                    color: variables.$text-beige;
+                }
+            }
+        }
+
+        &:hover {
+            .dropdown-arrow {
+                transform: rotate(180deg);
+                color: #fff;
+            }
+
+            .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        &.active {
+            .dropdown-arrow {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+  .header__contact {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__top {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header__location {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .header__contact {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header__socials {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
+  .header__contact .callback {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__socials img:nth-child(n+4) {
+    display: none;
+  }
+
+  .header__phone {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    font-size: 12px;
+  }
+
+  .header__top {
+    display: none;
+  }
+
+  .header__location {
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .header__contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .header__socials {
+    margin-top: 5px;
+  }
+
+  .header__contact .callback {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__phone {
+    font-size: 13px;
+  }
+}
+
+.header__bottom {
+  background-color: variables.$text-dark-blue;
+  padding: 15px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  img {
+    height: 45px;
+  }
+
+  button {
+    height: 42px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__links {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .header__bottom img {
+    height: 40px;
+  }
+
+  .header__bottom button {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    max-width: 600px;
+  }
+
+  .header__bottom .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__bottom button {
+    order: 3;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header__links {
+    display: none;
+  }
+
+  .header__bottom {
+    position: relative;
+    padding: 20px 0 20px 0;
+
+    img {
+        padding-left: 20px;
+    }
+
+    button {
+        display: none;
+    }
+  }
+
+  .header__bottom .container {
+    justify-content: space-between;
+  }
+
+  .burger {
+    width: 28px;
+    height: 22px;
+    padding-right: 20px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .burger span {
+    display: block;
+    height: 3px;
+    background: variables.$text-white;
+    border-radius: 2px;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 91%;
+    background: variables.$text-dark-blue;
+    padding: 15px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+
+    a {
+      color: variables.$text-white;
+      font-size: 16px;
+    }
+  }
+
+  .mobile-menu.active {
+    display: flex;
+    z-index: 999;
+  }
+
+  .mobile-menu button {
+    margin-top: 10px;
+    width: 100%;
+  }
 }

@@ -1,0 +1,55 @@
+@use "variables";
+
+.badge {
+    background-color: variables.$text-dark-blue;
+    padding: 30px 88px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+
+        h2, h4 {
+            color: variables.$text-white;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 15px 30px;
+
+        img {
+            filter: invert(100%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 30px;
+
+        h2 {
+            font-size: 25px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        &__button {
+            padding: 12px 20px;
+            gap: 2px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+}

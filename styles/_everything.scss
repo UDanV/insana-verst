@@ -1,0 +1,128 @@
+@use "variables";
+
+.everything {
+    padding: 120px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+
+        button {
+            display: block;
+            padding: 15px 25px;
+            margin: 50px auto 0;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    &__buttons {
+        img { 
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent; 
+            width: auto; 
+            top: 49%;
+            transition: scale 0.3s; 
+
+            &:hover { 
+                scale: 1.2; 
+            } 
+        }
+    }
+
+    &__arrow--prev { left: 20px; transform: translateY(0%) rotate(180deg); }
+    &__arrow--next { right: 20px; }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid variables.$text-dark-blue;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    &__dot.active {
+        background-color: variables.$text-dark-blue;
+    }
+}
+
+@media (max-width: 1024px) {
+    .everything {
+        padding: 100px 0 70px 0;
+
+        &__card {
+            h4 {
+                font-size: 17px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .everything {
+        padding: 80px 0 60px 0;
+
+        h2 {
+            font-size: 26px;
+        }
+
+        &__wrapper {
+            button {
+                padding: 12px 20px;
+                font-size: 16px;
+                margin-top: 40px;
+            }
+        }
+
+        &__card {
+            h4 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .results__arrow {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .everything {
+        padding: 60px 0 50px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        &__card {
+            h4 {
+                font-size: 15px;
+            }
+        }
+    }
+}

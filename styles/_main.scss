@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: variables.$text-white;
-    padding: 100px;
+    padding: 150px 0;
     margin-top: 44px;
 
     h2 {
@@ -68,6 +68,91 @@
             &:first-child {
                 font-weight: 700;
             }
+        }
+    }
+}
+
+/* === АДАПТИВ ГЛАВНОГО БЛОКА === */
+
+@media (max-width: 1200px) {
+    .main__card {
+        width: 70%;
+        padding: 40px 50px;
+
+        button {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .main {
+        padding: 120px 0;
+    }
+
+    .main__card {
+        width: 80%;
+        font-size: 20px;
+        padding: 35px 40px;
+
+        button {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 100px 0;
+    }
+
+    .main__card {
+        width: 80%;
+        padding: 30px;
+        margin: 0 auto;
+        gap: 35px;
+
+        button {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    .main__advantages li::before {
+        left: -30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        padding: 80px 0;
+        margin-top: 20px;
+    }
+
+    .main__card {
+        font-size: 18px;
+        padding: 25px;
+        gap: 25px;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
+    .main__advantages li::before {
+        left: -25px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main__card {
+        font-size: 16px;
+        padding: 20px;
+
+        h2 {
+            font-size: 24px;
         }
     }
 }

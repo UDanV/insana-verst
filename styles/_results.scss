@@ -18,7 +18,7 @@
 
     button {
         display: block;
-        padding: 12px 25px;
+        padding: 15px 25px;
         margin: 80px auto 0;
     }
   }
@@ -63,9 +63,7 @@
     min-width: 450px;
     border-radius: 12px;
     color: variables.$text-white;
-    padding: 15px;
-    padding-left: 0;
-    flex-shrink: 0;
+    padding: 0;
 
     img {
       width: 100%;
@@ -75,6 +73,68 @@
     h4 {
       color: variables.$text-white;
       margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .results {
+    padding: 60px 0 70px 0;
+
+    &__gallery--card {
+      min-width: 350px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .results {
+    padding: 50px 0 60px 0;
+
+    &__buttons {
+      img {
+        top: 84%;
+      }
+    }
+
+    &__gallery {
+      gap: 16px;
+      padding: 0 10px;
+      justify-content: flex-start;
+    }
+
+    &__gallery--card {
+      min-width: 250px; 
+      h4 {
+        font-size: 16px;
+      }
+    }
+
+    h2 {
+      font-size: 26px;
+      padding: 0 10px;
+    }
+
+    &__wrapper button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .results {
+    &__gallery--card {
+      min-width: 260px;
+    }
+
+    h2 {
+      font-size: 24px;
     }
   }
 }

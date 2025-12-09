@@ -43,28 +43,13 @@
         <div class="container">
             <img src="./assets/logo.svg" alt="logo">
             <ul class="header__links">
-                <li class="header__dropdown">
-                    <a href="#">Услуги</a>
-                    <span class="dropdown-arrow">▼</span>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Пересадка(голова, борода, брови)</a></li>
-                        <li><a href="#">Трихология (трихолог, уход)</a></li>
-                        <li><a href="#">Косметология</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Услуги</a></li>
                 <li><a href="#">Цены</a></li>
                 <li><a href="#">Способы оплаты</a></li>
                 <li><a href="#">Результаты</a></li>
                 <li><a href="#">Отзывы</a></li>
                 <li><a href="#">Рекомендации</a></li>
-                <li class="header__dropdown">
-                    <a href="#">О клинике</a>
-                    <span class="dropdown-arrow">▼</span>
-                    <ul class="dropdown-menu">
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Специалисты</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">О клинике</a></li>
                 <li><a href="#">Контакты</a></li>
                 <li><a href="#">Новости</a></li>
             </ul>
@@ -281,6 +266,118 @@
             </div>
     </section>
 
+    <section class="specialists">
+        <div class="container">
+            <div class="specialists__title">
+                <h2>Наши специалисты</h2>
+                <div class="specialists__controls">
+                    <img src="./assets/gallery-arr.svg" alt="prev" class="specialists__prev">
+                    <h4 class="specialists__counter">
+                        <span class="specialists__counter--current"></span>
+                        <span class="specialists__counter--divider">/</span>
+                        <span class="specialists__counter--total"></span>
+                    </h4>
+                    <img src="./assets/gallery-arr.svg" alt="next" class="specialists__next">
+                </div>
+            </div>
+
+            <div class="specialists__wrapper">
+                <div class="specialists__gallery" id="specialistsGallery">
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist1.png" alt="spec1">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist2.png" alt="spec2">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist1.png" alt="spec1">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist2.png" alt="spec2">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist1.png" alt="spec1">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                    <div class="specialists__card">
+                        <img src="./assets/specialist2.png" alt="spec2">
+                        <h4>Курьянова Татьяна Александровна</h4>
+                        <p>Врач-дерматовенеролог, трихолог</p>
+                        <a href="">Подробнее</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="license">
+        <div class="container">
+            <div class="specialists__title">
+                <h2>Лицензии и сертификаты</h2>
+                <div class="specialists__controls">
+                    <img src="./assets/gallery-arr.svg" alt="prev" class="license__prev">
+                    <h4 class="license__counter">
+                        <span class="license__counter--current"></span>
+                        <span class="license__counter--divider">/</span>
+                        <span class="license__counter--total"></span>
+                    </h4>
+                    <img src="./assets/gallery-arr.svg" alt="next" class="license__next">
+                </div>
+            </div>
+
+            <div class="license__wrapper">
+                <div class="license__gallery" id="licenseGallery">
+
+                    <div class="license__card">
+                        <img src="./assets/certificate1.png" alt="cert1">
+                    </div>
+
+                    <div class="license__card">
+                        <img src="./assets/certificate2.png" alt="cert2">
+                    </div>
+
+                    <div class="license__card">
+                        <img src="./assets/certificate3.png" alt="cert3">
+                    </div>
+
+                    <div class="license__card">
+                        <img src="./assets/certificate1.png" alt="cert1">
+                    </div>
+
+                    <div class="license__card">
+                        <img src="./assets/certificate2.png" alt="cert2">
+                    </div>
+
+                    <div class="license__card">
+                        <img src="./assets/certificate3.png" alt="cert3">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="feedback">
         <div class="container">
             <h2>Отзывы</h2>
@@ -443,326 +540,6 @@
         </div>
     </section>
 
-    <section class="video">
-        <div class="container">
-            <h2>Видео-отзывы</h2>
-
-            <div class="video__wrapper">
-                <div class="video__gallery">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                    <img src="./assets/video.png" alt="video">
-                </div>
-
-                <div class="video__dots"></div>
-
-                <button>Показать ещё</button>
-            </div>
-
-            <div class="video__buttons results__buttons">
-                <img class="results__arrow video__arrow--prev" src="./assets/gallery-arr.svg" alt="prev">
-                <img class="results__arrow video__arrow--next" src="./assets/gallery-arr.svg" alt="next">
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="badge">
-            <div class="badge__text">
-                <h2>Подпишись на наш телеграмм канал,</h2>
-                <h4>узнавай больше интересного и следи за результатами </h4>
-            </div>
-            <button class="badge__button">
-                <img src="./assets/tg.svg" alt="tg">
-                Подписаться
-            </button>
-        </div>
-    </div>
-
-    <section class="about">
-        <div class="container">
-            <div class="about__header">
-                <img src="./assets/article1.png" alt="article1">
-                <div class="about__text">
-                    <h2>О нашей клинике</h2>
-                    <p><span>Клиника пересадки волос INSANIA —</span> это воплощение современного подхода в области трансплантации волос. Мы используем передовые методики, гарантируем нашим пациентам естественный и долговременный результат.</p>
-                    <button>Узнать подробнее</button>
-                    <div class="about__achievements">
-
-                        <div class="about__achievements--card">
-                            <h2>1000+</h2>
-                            <p>довольных пациентов</p>
-                        </div>
-
-                        <div class="about__achievements--card">
-                            <h2>20+</h2>
-                            <p> лет стаж врачей</p>
-                        </div>
-
-                        <div class="about__achievements--card">
-                            <h2>500+</h2>
-                            <p>проведенных процедур</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="about__footer">
-                <div class="about__advantages">
-                    <h4>Ваша уверенность в результате — наш главный приоритет.</h4>
-                    <div class="about__warranty">
-                        <p>Пожизненная гарантия</p>
-                        <p>Приживаемость пересаженных волос — навсегда, и это закреплено в договоре.</p>
-                    </div>
-
-                    <div class="about__warranty">
-                        <p>Естественный результат</p>
-                        <p>Создаем природную густоту и линию роста. Никто не догадается, что у вас была трансплантация.</p>
-                    </div>
-
-                    <div class="about__warranty">
-                        <p>Без боли и шрамов</p>
-                        <p>Современные малотравматичные методики обеспечивают комфорт во время процедуры и отсутствие видимых следов в дальнейшем.</p>
-                    </div>
-
-                    <div class="about__warranty">
-                        <p>Восстановление за 1 день</p>
-                        <p>Вернуться к привычной жизни можно уже на следующий день после трансплантации.</p>
-                    </div>
-
-                    <div class="about__warranty">
-                        <p>Команда экспертов и лучшее оборудование</p>
-                        <p>Опытные врачи с международной практикой и слаженные команды работают на новейшем оборудовании для вашей безопасности и безупречного результата.</p>
-                    </div>
-                </div>
-                <img src="./assets/article3.png" alt="article3">
-            </div>
-        </div>
-    </section>
-
-    <section class="specialists">
-        <div class="container">
-            <div class="specialists__title">
-                <h2>Наши специалисты</h2>
-                <div class="specialists__controls">
-                    <img src="./assets/gallery-arr.svg" alt="prev" class="specialists__prev">
-                    <h4 class="specialists__counter">
-                        <span class="specialists__counter--current"></span>
-                        <span class="specialists__counter--divider">/</span>
-                        <span class="specialists__counter--total"></span>
-                    </h4>
-                    <img src="./assets/gallery-arr.svg" alt="next" class="specialists__next">
-                </div>
-            </div>
-
-            <div class="specialists__wrapper">
-                <div class="specialists__gallery" id="specialistsGallery">
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist1.png" alt="spec1">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist2.png" alt="spec2">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist1.png" alt="spec1">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist2.png" alt="spec2">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist1.png" alt="spec1">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                    <div class="specialists__card">
-                        <img src="./assets/specialist2.png" alt="spec2">
-                        <h4>Курьянова Татьяна Александровна</h4>
-                        <p>Врач-дерматовенеролог, трихолог</p>
-                        <a href="">Подробнее</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="license">
-        <div class="container">
-            <div class="specialists__title">
-                <h2>Лицензии и сертификаты</h2>
-                <div class="specialists__controls">
-                    <img src="./assets/gallery-arr.svg" alt="prev" class="license__prev">
-                    <h4 class="license__counter">
-                        <span class="license__counter--current"></span>
-                        <span class="license__counter--divider">/</span>
-                        <span class="license__counter--total"></span>
-                    </h4>
-                    <img src="./assets/gallery-arr.svg" alt="next" class="license__next">
-                </div>
-            </div>
-
-            <div class="license__wrapper">
-                <div class="license__gallery" id="licenseGallery">
-
-                    <div class="license__card">
-                        <img src="./assets/certificate1.png" alt="cert1">
-                    </div>
-
-                    <div class="license__card">
-                        <img src="./assets/certificate2.png" alt="cert2">
-                    </div>
-
-                    <div class="license__card">
-                        <img src="./assets/certificate3.png" alt="cert3">
-                    </div>
-
-                    <div class="license__card">
-                        <img src="./assets/certificate1.png" alt="cert1">
-                    </div>
-
-                    <div class="license__card">
-                        <img src="./assets/certificate2.png" alt="cert2">
-                    </div>
-
-                    <div class="license__card">
-                        <img src="./assets/certificate3.png" alt="cert3">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <div class="preparation">
-            <h2>Как подготовиться к пересадке волос:</h2>
-            <div class="prices__buttons">
-                <button class="active">За 3 дня до процедуры</button>
-                <button>В день процедуры</button>
-                <button>Анализы</button>
-            </div>
-
-            <div class="preparation__">
-                <h3>За 3 дня до процедуры:</h3>
-                <ul class="turnkey__list">
-                    <li>Исключите прием витамина С, аспирина и аспиринсодержащих препаратов</li>
-                    <li>Не употребляйте алкогольные напитки</li>
-                    <li>Не брейте и не стригите волосы до операции</li>
-                </ul>
-            </div>
-
-            <div class="preparation__bid">
-                <h4>Больше информации о подготовке, показаниях и процессе пересадки волос</h4>
-                <button>Узнать больше</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="path">
-        <div class="container">
-            <h2>Insania- время вернуть волосы. Ваш путь всего за <span>3 шага</span></h2>
-            <div class="path__container">
-                <div class="path__wrapper">
-                    <div class="path__card">
-                        <h2>01</h2>
-                        <h4>ШАГ 1: Консультация</h4>
-                        <p><span>Оставьте заявку →</span> Бесплатная консультация врача, диагностика и сдача всех необходимых анализов прямо в клинике. Всё в один день.</p>
-                    </div>
-
-                    <div class="path__card--center">
-                        <h2>02</h2>
-                        <h4>ШАГ 2: Пересадка</h4>
-                        <p><span>Одна комфортная процедура →</span> В день трансплантации вас ждет безболезненная процедура под местной анестезией и забота команды экспертов.</p>
-                    </div>
-
-                    <div class="path__card--end">
-                        <h2>03</h2>
-                        <h4>ШАГ3: Результат и поддержка</h4>
-                        <p><span>Забудьте о проблеме →</span> Быстрое восстановление и пожизненная гарантия на приживаемость волос. Вы выглядите естественно и уверенно.</p>
-                    </div>
-                </div>
-                <img src="./assets/path-man.png" alt="path-man">
-            </div>
-        </div>
-    </section>
-
-    <section class="articles">
-        <div class="container">
-            <h2>Полезные статьи</h2>
-
-            <div class="articles__wrapper">
-
-                <div class="articles__gallery">
-                    <div class="articles__card">
-                        <img src="./assets/article1.png" alt="article">
-                        <h4>Как проходит пересадка волос: операция глазами хирурга</h4>
-                        <p>24 августа 2025</p>
-                    </div>
-
-                    <div class="articles__card">
-                        <img src="./assets/article2.png" alt="article">
-                        <h4>Результаты пересадки волос: как выбрать правильную клинику</h4>
-                        <p>29 августа 2025</p>
-                    </div>
-
-                    <div class="articles__card">
-                        <img src="./assets/article3.png" alt="article">
-                        <h4>Пересадка волос: мой неудачный опыт и история восстановления</h4>
-                        <p>29 августа 2025</p>
-                    </div>
-
-                    <div class="articles__card">
-                        <img src="./assets/article1.png" alt="article">
-                        <h4>Как проходит пересадка волос: операция глазами хирурга</h4>
-                        <p>24 августа 2025</p>
-                    </div>
-
-                    <div class="articles__card">
-                        <img src="./assets/article2.png" alt="article">
-                        <h4>Результаты пересадки волос: как выбрать правильную клинику</h4>
-                        <p>29 августа 2025</p>
-                    </div>
-                </div>
-
-                <div class="articles__dots"></div>
-
-                <button>Показать ещё</button>
-            </div>
-
-            <div class="articles__buttons results__buttons">
-                <img class="results__arrow articles__arrow--prev" src="./assets/gallery-arr.svg" alt="prev">
-                <img class="results__arrow articles__arrow--next" src="./assets/gallery-arr.svg" alt="next">
-            </div>
-        </div>
-    </section>
-
     <section class="faq">
         <div class="container">
             <h2>Ответы на популярные вопросы</h2>
@@ -820,17 +597,6 @@
                         </div>
                     </div>
 
-                </div>
-
-                <div class="faq__question">
-                    <p>Не нашли ответ?</p>
-                    <p>Напишите нам в соцсетях</p>
-                    <div class="faq__socials">
-                        <img src="./assets/wa.svg" alt="wa">
-                        <img src="./assets/tg.svg" alt="tg">
-                        <img src="./assets/vk.svg" alt="vk">
-                    </div>
-                    <img src="./assets/faq-man.png" alt="faq-man">
                 </div>
             </div>
 

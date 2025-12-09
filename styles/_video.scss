@@ -1,0 +1,111 @@
+@use "variables";
+
+.video {
+    padding: 80px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+
+        button {
+            display: block;
+            padding: 15px 25px;
+            margin: 20px auto 0;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    &__buttons {
+        img { 
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent; 
+            width: auto; 
+            top: 53%;
+            transition: scale 0.3s; 
+
+            &:hover { 
+                scale: 1.2; 
+            } 
+        }
+    }
+
+    &__arrow--prev { left: 20px; transform: translateY(-50%) rotate(180deg); }
+    &__arrow--next { right: 20px; }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 8px;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid variables.$text-dark-blue;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    &__dot.active {
+        background-color: variables.$text-dark-blue;
+    }
+}
+
+@media (max-width: 1024px) {
+    .video {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        padding: 60px 0;
+
+        &__buttons {
+            .results__arrow {
+                display: none;
+            }
+        }
+
+        &__gallery {
+            gap: 14px;
+            padding: 0 12px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        &__wrapper button {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-top: 24px;
+        }
+
+        &__dots {
+            margin-top: 24px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .video {
+        padding: 50px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+}

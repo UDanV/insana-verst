@@ -6,6 +6,18 @@
 @use "turnkey";
 @use "results";
 @use "feedback";
+@use "video";
+@use "badge";
+@use "everything";
+@use "articles";
+@use "specialists";
+@use "about";
+@use "license";
+@use "path";
+@use "faq";
+@use "quiz";
+@use "footer";
+@use "preparation";
 
 html, body {
     font-family: "Manrope";
@@ -64,6 +76,10 @@ button {
         background-color: variables.$text-white;
         color: variables.$text-beige;
     }
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .container {
