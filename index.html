@@ -61,8 +61,8 @@
                     <a href="#">О клинике</a>
                     <span class="dropdown-arrow">▼</span>
                     <ul class="dropdown-menu">
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Специалисты</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Специалисты</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Контакты</a></li>
@@ -612,6 +612,25 @@
             </div>
         </div>
     </section>
+
+    <div id="specialistModal" class="modal" style="display: none;">
+        <div class="modal__overlay" data-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-close>&times;</button>
+
+            <div class="modal__inner">
+                <div class="modal__photo">
+                    <img src="" alt="" id="modalSpecialistImageTop">
+                    <img src="" alt="" id="modalSpecialistImageBottom">
+                </div>
+                <div class="modal__info">
+                    <h3 id="modalSpecialistName"></h3>
+                    <p id="modalSpecialistPosition"></p>
+                    <div id="modalSpecialistBio"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="license">
         <div class="container">
@@ -1276,6 +1295,18 @@
             </div>
         </div>
     </footer>
+
+    <div id="news-promotion-tooltip" class="news-promotion-tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-content">
+            <h3>Акция!</h3>
+            <p>Верните волосы с выгодой.</p>
+            <p><b>Акция: 10% на пересадку волос под ключ!</b></p>
+            <a href="">Узнать больше</a>
+        </div>
+        <button class="tooltip-close" aria-label="Закрыть">&times;</button>
+    </div>
+
 <script>
     document.querySelector('.burger').addEventListener('click', () => {
         document.querySelector('.mobile-menu').classList.toggle('active');
@@ -1283,6 +1314,8 @@
 </script>
 </body>
 <script src="./scripts/gallery.js"></script>
+<script src="./scripts/detailsModal.js"></script>
+<script src="./scripts/promotion.js"></script>
 <script src="./scripts/dropdownHeader.js"></script>
 <script src="./scripts/carousel.js"></script>
 <script src="./scripts/dropdown.js"></script>
