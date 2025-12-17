@@ -1,0 +1,149 @@
+@use "variables";
+
+.results {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: variables.$text-dark-blue;
+  padding: 70px 0 80px 0;
+
+  h2 {
+    color: variables.$text-white;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+
+    button {
+        display: block;
+        padding: 15px 25px;
+        margin: 80px auto 0;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;  
+    margin: 0 auto;      
+    pointer-events: none;
+
+    img { 
+        pointer-events: auto;
+        cursor: pointer;
+        position: absolute;
+        background-color: transparent; 
+        width: auto; 
+        transition: scale 0.3s; 
+        top: 42%;
+
+        &:hover { 
+            scale: 1.2; 
+        } 
+    } 
+    
+    .results__arrow--prev { 
+        left: 20px; 
+        transform: rotate(180deg); 
+        z-index: 999; 
+    } 
+    
+    .results__arrow--next { 
+        right: 20px; 
+        z-index: 999; 
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__gallery--card {
+    min-width: 450px;
+    border-radius: 12px;
+    color: variables.$text-white;
+    padding: 0;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    h4 {
+      color: variables.$text-white;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .results {
+    padding: 60px 0 70px 0;
+
+    &__gallery--card {
+      min-width: 350px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .results {
+    padding: 50px 0 60px 0;
+
+    &__buttons {
+      img {
+        top: 84%;
+      }
+    }
+
+    &__gallery {
+      gap: 0;
+    }
+
+    &__gallery--card {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      box-sizing: border-box;
+      padding: 0 12px;
+
+      h4 {
+        font-size: 16px;
+      }
+    }
+
+    h2 {
+      font-size: 26px;
+      padding: 0 12px;
+    }
+
+    &__wrapper button {
+      padding: 12px 20px;
+      font-size: 16px;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .results {
+    &__gallery--card {
+      min-width: 260px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+}

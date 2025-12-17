@@ -1,0 +1,191 @@
+@use "variables";
+
+.path {
+    background-color: rgba(21, 36, 48, 0.08);
+    padding-top: 75px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+
+        h2 {
+            color: variables.$text-beige;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__card {
+        position: relative;
+        background: url("../assets/union1.svg") no-repeat center / 100% 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        padding: 20px 40px;
+        color: #191919;
+        border-radius: 20px;
+        min-height: 215px;
+
+        &--start {
+            position: relative;
+            background: url("../assets/union2.svg") no-repeat center / 100% 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            padding: 40px;
+            color: #191919;
+            border-radius: 20px;
+            min-height: 215px;
+        }
+
+        &--center {
+            position: relative;
+            background: url("../assets/union2.svg") no-repeat center / 100% 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            padding: 40px;
+            color: #191919;
+            border-radius: 20px;
+            min-height: 215px;
+        }
+
+        &--end {
+            position: relative;
+            background: url("../assets/union3.svg") no-repeat center / 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 40px 20px 40px;
+            color: #191919;
+            border-radius: 20px;
+            min-height: 215px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1355px) {
+    .path__container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .path__card {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .path {
+        padding: 0;
+
+        h2 {
+            padding: 0 16px 0 16px;
+            font-size: 36px;
+        }
+
+        &__container {
+            gap: 40px;
+        }
+
+        img {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .path {
+        h2 {
+            font-size: 24px;
+        }
+
+        &__container {
+            flex-direction: column;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        &__wrapper {
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__card {
+            &--center,
+            &--end,
+            &--start {
+                width: auto;
+                background-size: contain;
+                min-height: 190px;
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 320px;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .path {
+        padding-top: 40px;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        &__card {
+            &--center,
+            &--end,
+            &--start {
+                width: auto;
+                padding: 0 20px;
+                gap: 0;
+                background-size: contain;
+                min-height: 190px;
+                justify-content: flex-start;
+
+                h2, h4 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            &--end {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .path {
+        &__card {
+            &--center,
+            &--start {
+                
+                justify-content: center;
+            }
+        }
+
+        &__wrapper {
+            gap: 0;
+        }
+    }
+}
